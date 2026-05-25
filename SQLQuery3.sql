@@ -1,0 +1,14 @@
+﻿USE CRMSystem;
+
+CREATE TABLE Deals
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    ClientId INT NOT NULL,
+    DealName NVARCHAR(100) NOT NULL,
+    Amount DECIMAL(10,2) NOT NULL,
+    Status NVARCHAR(50) NOT NULL,
+    CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
+
+    CONSTRAINT FK_Deals_Clients
+    FOREIGN KEY (ClientId) REFERENCES Clients(Id)
+);

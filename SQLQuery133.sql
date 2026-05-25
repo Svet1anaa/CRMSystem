@@ -1,0 +1,2 @@
+﻿ALTER TABLE Users
+ALTER COLUMN Password nvarchar(255) NULL;

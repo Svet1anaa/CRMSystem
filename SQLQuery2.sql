@@ -1,0 +1,10 @@
+﻿USE CRMSystem;
+
+CREATE TABLE Clients
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100),
+    Phone NVARCHAR(30),
+    Company NVARCHAR(100)
+);
